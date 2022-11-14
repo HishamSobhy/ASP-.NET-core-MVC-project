@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>@ViewBag.title</title>
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+   <style>
+        section.section-one {
+ height: 100vh;
+} 
+.footerr {
+    background-color: burlywood;
+}
+
+ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+ padding-left: 40%;
+}
+.section-one-div-one {
+ padding-top: 10%;
+}
+:root {
+ --orang_background:#FEB861 ;
+--text_button : #fff;
+--orang_btn : #FE9A52;
+--gray :#E1E6ED;
+}
+
+button.btn.btn-warning {
+ background: linear-gradient(95.04deg, #FE9A52 0.04%, #FF5748 100.04%)!important;
+ color: var(--text_button) !important;
+ width: 190px;
+height: 45px;
+}
+
+img {
+ max-width: 100%;
+ height: auto;
+}
+
+.right {
+ text-align: center;
+}
+
+img.icon {
+ width: 50%;
+}
+
+.image_mobile {
+ padding-top: 100px;
+}
+
+.cardes {
+ padding-top: 75px;
+}
+section.section.two{
+ padding: 5% 0;
+ background: antiquewhite;
+}
+
+img.icon_section4 {
+ width: 71px;
+}
+button.btn.btn-warning-coustum {
+ background: var(--text_button);
+ color: var(--orang_btn) ;
+ font-weight: 600;
+ width: 190px;
+ height: 45px;
+}
+
+
+section.section-four {
+ padding-top: 50px;
+ margin: 50px;
+}
+
+.images {
+ text-align: center;
+}
+
+section.section-seven {
+ background: linear-gradient(274.74deg, #FFECD7 9.5%, rgba(255, 236, 215, 0) 100.79%);
+}
+.section-seven_castum {
+ padding-top: 10%;
+}
+
+.col-md-3 {
+ padding-top: 93px;
+}
+
+h1.statment {
+ text-align: center;
+ padding: 100px 0;
+}
+
+h2.last_castoum {
+ color: var(--text_button);
+ padding-top: 7%;
+}
+
+.last_f {
+ padding-top: 30%;
+}
+
+.new_ip {
+ padding-top: 84px;
+}
+
+.myDiv {
+ position: relative;
+ z-index: 9;
+ background: linear-gradient(208.7deg, #FE9A52 -2.93%, #FF5748 88.81%);
+ width: 100%;
+ height: 83vh;
+}
+
+.myDiv:before {
+ content: "";
+ position: absolute;
+ z-index: -1;  
+ top: 0;
+ right: 0;
+ bottom: 70%;
+ left: 0;
+ background: var(--text_button);
+}
+input[type="email"] {
+ width: 60%;
+ height: 39px;
+}
+
+section.section-ten {
+ padding: 15% 0;
+}
+
+h5 {
+ font-size: 18px;
+}
+.col-6 {
+ text-align: center;
+}
+ul.mean {
+ padding-left: 63px;
+ font-size: 16px;
+ font-weight: 700;
+}
+
+.footer {
+ padding: 50px 0;
+ border-top: 1px solid;
+ 
+}
+
+section.section-fife {
+ background: linear-gradient(180deg, #FFFEFC -55.43%, #FFF8F0 100%);
+ padding: 5% 0;
+}
+
+.footer-last {
+ display: flex;
+}
+h6.end {
+ font-size: 10px;
+}
+   </style>
+  </head>
+
+ <body>
+ <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Student Application</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Houres studied</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">Developers level</a>
+          </li>
+          <li class="nav-item">
+                        <a class="nav-link disabled">certification</a>
+          </li>
+          <div class="btn-group">
+              @if(!User.Identity.IsAuthenticated){
+                       <a  asp-controller="account" asp-action="login" class="btn btn-light">Sign in</a>
+              }
+              
+              else{
+            <a asp-controller="account" asp-action="Logout" class="btn btn-warning" aria-current="page">Log out/ @User.Identity.Name</a>
+              }
+          </div>
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+      @RenderBody()
+
+<section class="section-eleven">
+  <div class="footerr">
+  <div class="container">
+    <div class="footer"></div>>
+    <div class="row">
+       <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Why Us</ul>
+        <ul>
+          
+          <ul>Channel</ul>
+          <ul>Scale</ul>
+          <ul>Why Us</ul>
+          <ul>Watch Demo</ul>
+        </ul>
+        
+      </div>
+      <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Product</ul>
+        <ul>
+          
+          <ul>Features</ul>
+          <ul>Integrations</ul>
+          <ul>Enterprise</ul>
+          <ul>Solutions</ul>
+        </ul>
+        
+      </div>
+      <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Resources</ul>
+        <ul>
+          
+          <ul>Partners</ul>
+          <ul>Developers</ul>
+          <ul>Apps</ul>
+          <ul>Blogs</ul>
+        </ul>
+        
+      </div>
+      <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Company</ul>
+        <ul>
+          
+          <ul>About Us</ul>
+          <ul>Leadership</ul>
+          <ul>Investor Relations</ul>
+          <ul>News</ul>
+        </ul>
+        
+      </div>
+      <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Pricing</ul>
+        <ul>
+          
+          <ul>Plans</ul>
+          <ul>Paid vs. Free</ul>
+        </ul>
+        
+      </div>
+
+      <div class="col-lg-2 col-sm-6">
+        <ul class="mean">Follow</ul>
+        <ul>
+         
+       <div class="icon_social_meda">
+        <img src="./images/facebooick.png" alt="">
+        <img src="./images/twitter.png" alt="">
+        <img src="./images/snapchat.png" alt="">
+        <img src="./images/instagram.png" alt="">
+       </div>
+        </ul>
+      </div>
+    </div>
+    <div class="footer"></div>
+    <div class="footer-last">
+    <div class="footer-last1"><h6 class="end">All rights Reserved</h6></div>
+    <div class="footer-last2"> <h6 class="end">Your Company, 2021</h6></div>
+   
+  </div>
+  </div>
+
+</section>
+ </body>
+
+</html>

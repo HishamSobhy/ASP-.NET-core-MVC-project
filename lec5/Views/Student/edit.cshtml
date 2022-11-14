@@ -1,0 +1,46 @@
+﻿@model Student
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        .first {
+            height: 100vh;
+        }
+
+        form {
+            text-align: center;
+            padding-top: 12%;
+        }
+
+        .age {
+            margin: 36px;
+        }
+    </style>
+</head>
+<body>
+    <div class="new">
+    <div class="first">
+        <form method="post">
+            <div class="name">
+                    <input asp-for="Name" placeholder="Name" />
+            </div>
+        <div class="age">
+                    <input asp-for="Age" placeholder="Age" />
+        </div>
+
+            <input class="btn btn-danger" type="submit" value="Apply" />
+        </form>
+
+    </div>
+    </div>
+</body>
+</html>

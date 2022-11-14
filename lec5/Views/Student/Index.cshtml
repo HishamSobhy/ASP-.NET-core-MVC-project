@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Student>
+
+@{
+    //Layout = "~/views/shared/_Layout2.cshtml";
+    ViewBag.title = "student Page";
+}
+
+
+<style>
+    .add {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+    }
+
+    .section_one {
+        height: 100vh;
+    }
+</style>
+<div class="section_one">
+<div class="add">
+
+    <a asp-action="create" asp-controller="Student" class="btn btn-outline-danger" >Add new student</a>
+
+</div>
+<div class="starting_page">
+    <table class="table table-bordered">
+        <tr>
+            <td>Student Id</td>
+            <td>Student Name</td>
+            <td>Student Age</td>
+            <td>Student Department</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Age</td>
+                <td>@item.Department.Dept_Name
+                <td>
+                <td>
+                    <a asp-action="edit" asp-controller="Student" class="btn btn-outline-secondary" asp-route-id="@item.ID">Edit Info</a>
+                </td>
+                <td>
+                    <a asp-action="DeleteStudent" asp-controller="Student" class="btn btn-outline-danger" asp-route-id="@item.ID">Delete Student</a>
+                </td>
+                <td>
+                        <a asp-action="details" asp-controller="Student" class="btn btn-outline-success" asp-route-id="@item.ID">Details Student</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+</div>

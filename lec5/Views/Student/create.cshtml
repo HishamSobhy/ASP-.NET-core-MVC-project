@@ -1,0 +1,44 @@
+﻿@model Student
+@{
+ 
+}
+<style>
+    .first_section{
+        height: 100vh;
+    }
+
+
+    form.form-group.m-3 {
+      
+        justify-content: center;
+        text-align: center;
+     
+        padding-top: 10%;
+    }
+
+    .age {
+        margin: 5%;
+        padding-left: 15px;
+    }
+</style>
+<div class="first_section">
+    <form method="post" class="form-group m-3">
+        <div class="name">
+            <label>Student Name</label>
+            <input asp-for="Name" /> <br />
+
+        </div>
+        <div class="age">
+            <label>Student Age</label>
+            <input asp-for="Age" /> <br />
+        </div>
+        <div class="selected">
+        <label>Department Name</label> <br />
+        <select asp-for="Dept_Id" asp-items="ViewBag.dept">
+           
+       </select>
+       <input class="btn btn-primary" type="submit" value="Insert" />
+        </div>
+    </form>
+
+</div>
